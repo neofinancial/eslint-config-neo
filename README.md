@@ -15,11 +15,8 @@ You can also install a specific version of the package by appending the version 
 ### Install Peer Dependencies
 
 ```sh
-yarn add --dev eslint lint-staged husky typescript
-yarn add --dev --exact prettier@1.16.4
+yarn add --dev eslint prettier lint-staged husky typescript
 ```
-
-*It is recommended that you install an exact version of Prettier as they may introduce formatting changes in minor versions.*
 
 ### Make ESLint Config File
 
@@ -76,7 +73,7 @@ Add the engines field to `package.json`
 
 ```json
 "engines": {
-  "node": ">=10.0.0"
+  "node": "^10.0.0"
 }
 ```
 
@@ -86,7 +83,6 @@ Add scripts for linting and formatting to `package.json`
 
 ```json
 "scripts": {
-  "precommit": "lint-staged",
   "lint": "eslint .",
   "format": "prettier --write \"**/*.{ts,tsx,js,json,graphql,md}\"",
   "format:check": "prettier --debug-check \"**/*.{ts,tsx,js,json,graphql,md}\""
@@ -98,6 +94,11 @@ Add scripts for linting and formatting to `package.json`
 Add a precommit hook to `package.json` to automatically lint and format any files staged for commit
 
 ```json
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
 "lint-staged": {
   "concurrent": false,
   "linters": {

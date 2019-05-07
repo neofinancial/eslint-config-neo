@@ -2,15 +2,15 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:node/recommended',
     'plugin:jest/recommended',
     'plugin:unicorn/recommended',
     'plugin:promise/recommended',
-    'plugin:lodash/recommended',
     'prettier',
     'prettier/@typescript-eslint'
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'jest', 'unicorn', 'promise', 'lodash', 'no-loops'],
+  plugins: ['@typescript-eslint', 'node', 'jest', 'unicorn', 'promise'],
   env: {
     es6: true,
     jest: true
@@ -32,6 +32,7 @@ module.exports = {
     'no-mixed-requires': 'error',
     'no-new-require': 'error',
     'no-param-reassign': 'error',
+    'no-process-exit': 'off',
     'no-return-await': 'error',
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
@@ -45,13 +46,17 @@ module.exports = {
 
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+' }],
 
+    'node/exports-style': 'error',
+    'node/no-unsupported-features/es-syntax': [
+      'warn',
+      {
+        ignores: ['modules']
+      }
+    ],
+
     'unicorn/no-abusive-eslint-disable': 'off',
-    'unicorn/prevent-abbreviations': 'off',
-
-    'lodash/prefer-constant': 'off',
-    'lodash/prefer-lodash-method': 'off',
-
-    'no-loops/no-loops': 'warn'
+    'unicorn/no-process-exit': 'off',
+    'unicorn/prevent-abbreviations': 'off'
   },
   overrides: [
     {

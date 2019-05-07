@@ -1,8 +1,9 @@
 module.exports = {
   extends: ['eslint-config-neo', 'plugin:node/recommended', 'plugin:react/recommended'],
-  plugins: ['node', 'react'],
+  plugins: ['node', 'react', 'react-hooks'],
   env: {
-    browser: true
+    browser: true,
+    jest: true
   },
   settings: {
     react: {
@@ -10,19 +11,11 @@ module.exports = {
     }
   },
   rules: {
-    'no-process-exit': 'off',
-
-    'unicorn/no-process-exit': 'off',
-
-    'node/exports-style': 'error',
     'node/no-unpublished-require': 'off',
-    'node/no-unsupported-features/es-syntax': [
-      'warn',
-      {
-        ignores: ['modules']
-      }
-    ],
 
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn'
   }
 };

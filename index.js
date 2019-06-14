@@ -10,7 +10,7 @@ module.exports = {
     'prettier/@typescript-eslint'
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'node', 'jest', 'unicorn', 'promise'],
+  plugins: ['@typescript-eslint', 'node', 'jest', 'unicorn', 'promise', 'import'],
   env: {
     es6: true,
     jest: true
@@ -40,11 +40,13 @@ module.exports = {
     'no-use-before-define': ['error', 'nofunc'],
     'no-useless-concat': 'warn',
     'no-var': 'warn',
+    'padding-line-between-statements': ['warn', { blankLine: 'always', prev: '*', next: 'return' }],
     'prefer-const': 'warn',
     'prefer-template': 'warn',
     'require-await': 'warn',
 
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+' }],
+    '@typescript-eslint/explicit-function-return-type': 'error',
 
     'node/exports-style': 'error',
     'node/no-unsupported-features/es-syntax': [
@@ -56,13 +58,39 @@ module.exports = {
 
     'unicorn/no-abusive-eslint-disable': 'off',
     'unicorn/no-process-exit': 'off',
-    'unicorn/prevent-abbreviations': 'off'
+    'unicorn/prevent-abbreviations': 'off',
+
+    'import/no-restricted-paths': ['error', { zones: [{ target: './src', from: './test' }] }],
+    'import/no-absolute-path': 'error',
+    'import/no-useless-path-segments': 'error',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['**/test/**/*', '**/webpack.*.js'],
+        optionalDependencies: false,
+        peerDependencies: false
+      }
+    ],
+    'import/order': [
+      'warn',
+      {
+        groups: [['builtin', 'external'], ['sibling', 'parent']],
+        'newlines-between': 'always-and-inside-groups'
+      }
+    ],
+    'import/newline-after-import': ['warn']
   },
   overrides: [
     {
       files: ['*.js', '*.jsx'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off'
+      }
+    },
+    {
+      files: ['**/test/**/*'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off'
       }
     }
   ]

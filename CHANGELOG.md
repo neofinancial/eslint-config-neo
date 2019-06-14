@@ -1,3 +1,8 @@
+## 0.3.0 (June 14, 2019)
+
+* Add import plugin
+* Ignore some rules in tests
+
 ## 0.2.0 (May 7, 2019)
 
 * Add React Hooks plugin

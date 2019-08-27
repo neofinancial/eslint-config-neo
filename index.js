@@ -43,10 +43,19 @@ module.exports = {
     'padding-line-between-statements': ['warn', { blankLine: 'always', prev: '*', next: 'return' }],
     'prefer-const': 'warn',
     'prefer-template': 'warn',
-    'require-await': 'warn',
+    'require-await': 'off',
 
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+' }],
     '@typescript-eslint/explicit-function-return-type': 'error',
+    '@typescript-eslint/promise-function-async': [
+      "error",
+      {
+        "checkArrowFunctions": true,
+        "checkFunctionDeclarations": true,
+        "checkFunctionExpressions": true,
+        "checkMethodDeclarations": true
+      }
+    ],
 
     'node/exports-style': 'error',
     'node/no-unsupported-features/es-syntax': [

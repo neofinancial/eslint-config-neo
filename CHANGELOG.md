@@ -1,3 +1,8 @@
+## 0.3.2 (Aug 27 2019)
+
+- `@typescript-eslint/promise-function-async` on
+- `require-await` off (conflicts with above)
+
 ## 0.3.1 (June 24, 2019)
 
 - Bump eslint-plugin-jest to `22.7.0`

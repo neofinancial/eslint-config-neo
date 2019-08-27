@@ -36,7 +36,7 @@ Add `.prettierrc` to project root
 
 ```json
 {
-  "printWidth": 100,
+  "printWidth": 120,
   "singleQuote": true
 }
 ```
@@ -73,7 +73,7 @@ Add the engines field to `package.json`
 
 ```json
 "engines": {
-  "node": "^10.0.0"
+  "node": "^10.10.0"
 }
 ```
 

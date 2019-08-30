@@ -47,15 +47,19 @@ module.exports = {
 
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+' }],
     '@typescript-eslint/explicit-function-return-type': 'error',
-    '@typescript-eslint/promise-function-async': [
-      "error",
-      {
-        "checkArrowFunctions": true,
-        "checkFunctionDeclarations": true,
-        "checkFunctionExpressions": true,
-        "checkMethodDeclarations": true
-      }
-    ],
+
+    // Commentingi this out until we are on 2.0.0
+    // This makes the linter 10x slower on 1.x
+    //
+    // '@typescript-eslint/promise-function-async': [
+    //   "error",
+    //   {
+    //     "checkArrowFunctions": true,
+    //     "checkFunctionDeclarations": true,
+    //     "checkFunctionExpressions": true,
+    //     "checkMethodDeclarations": true
+    //   }
+    // ],
 
     'node/exports-style': 'error',
     'node/no-unsupported-features/es-syntax': [

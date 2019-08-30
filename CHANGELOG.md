@@ -1,4 +1,8 @@
-## 0.3.2 (Aug 27 2019)
+## 0.3.3 (August 30, 2019)
+
+- Revert `@typescript-eslint/promise-function-async` rule due to performance issues
+
+## 0.3.2 (August 27, 2019)
 
 - `@typescript-eslint/promise-function-async` on
 - `require-await` off (conflicts with above)

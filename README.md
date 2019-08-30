@@ -129,3 +129,12 @@ No. If you want to do this, you have to ask the team. If a rule really doesn't m
 **Can I disable the rule on one line in my code, I have a good reason.**
 
 Yes. That's ok. Use a single-line disable.
+
+## Publishing
+
+1. Update the version in `package.json`
+1. Create a `CHANGELOG` entry
+1. Commit your changes
+1. `npm pack` to see what will be published then delete the `.tgz` file that was created
+1. `npm publish`
+1. Create a release on GitHub. Use the version as the tag and release name. For example for version `1.0.0` the tag and release name would be `v1.0.0`. Add the `CHANGELOG` details to the release.

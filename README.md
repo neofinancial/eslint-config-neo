@@ -24,11 +24,16 @@ Add `.eslintrc` to project root
 
 ```json
 {
-  "extends": "eslint-config-neo/config-backend"
+  "extends": "eslint-config-neo/config-backend",
+  "parserOptions": {
+    "project": ["tsconfig.json", "test/tsconfig.json"]
+  }
 }
 ```
 
 _Use `eslint-config-neo/config-frontend` for frontend projects_
+
+:warning: You **must** include the `project` setting in `parserOptions` and list **all** of your `tsconfig` files. If you leave any out linting will be extremely slow.
 
 ### Make Prettier Config File
 

@@ -48,16 +48,15 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+' }],
     '@typescript-eslint/explicit-function-return-type': 'error',
 
-    // disabled for performance reasons for now, rules that require type information are very slow
-    // '@typescript-eslint/promise-function-async': [
-    //   "error",
-    //   {
-    //     "checkArrowFunctions": true,
-    //     "checkFunctionDeclarations": true,
-    //     "checkFunctionExpressions": true,
-    //     "checkMethodDeclarations": true
-    //   }
-    // ],
+    '@typescript-eslint/promise-function-async': [
+      "error",
+      {
+        "checkArrowFunctions": true,
+        "checkFunctionDeclarations": true,
+        "checkFunctionExpressions": true,
+        "checkMethodDeclarations": true
+      }
+    ],
 
     'node/exports-style': 'error',
     'node/no-unsupported-features/es-syntax': [

@@ -48,9 +48,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+' }],
     '@typescript-eslint/explicit-function-return-type': 'error',
 
-    // Commentingi this out until we are on 2.0.0
-    // This makes the linter 10x slower on 1.x
-    //
+    // disabled for performance reasons for now, rules that require type information are very slow
     // '@typescript-eslint/promise-function-async': [
     //   "error",
     //   {

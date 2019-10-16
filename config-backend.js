@@ -1,8 +1,7 @@
 module.exports = {
-  extends: ['eslint-config-neo'],
+  extends: ['./index.js'],
   env: {
     node: true,
-    jest: true,
     mongo: true
   },
   rules: {

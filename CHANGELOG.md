@@ -1,3 +1,11 @@
+# Changelog
+
+## 0.4.0 (October 16, 2019)
+
+- Add support for ESLint 6
+- Update `typescript-eslint` to `2.4.0`
+- Update all dependencies
+
 ## 0.3.3 (August 30, 2019)
 
 - Revert `@typescript-eslint/promise-function-async` rule due to performance issues

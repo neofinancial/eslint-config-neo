@@ -28,7 +28,7 @@ Add `.eslintrc` to project root
 }
 ```
 
-*Use `eslint-config-neo/config-frontend` for frontend projects*
+_Use `eslint-config-neo/config-frontend` for frontend projects_
 
 ### Make Prettier Config File
 

@@ -1,9 +1,8 @@
 module.exports = {
-  extends: ['eslint-config-neo', 'plugin:node/recommended', 'plugin:react/recommended'],
+  extends: ['./index.js', 'plugin:node/recommended', 'plugin:react/recommended'],
   plugins: ['node', 'react', 'react-hooks'],
   env: {
-    browser: true,
-    jest: true
+    browser: true
   },
   settings: {
     react: {

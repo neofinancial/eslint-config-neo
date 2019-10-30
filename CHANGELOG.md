@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1 (October 30, 2019)
+
+- Disable `eslint-plugin-node` rules that conflict with `eslint-plugin-import`
+- Enable Jest style rules
+
 ## 0.4.0 (October 16, 2019)
 
 - Add support for ESLint 6

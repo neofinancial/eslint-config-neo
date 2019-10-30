@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-neo",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Official Neo Financial ESLint configuration",
   "main": "index.js",
   "author": "Neo Financial Engineering <engineering@neofinancial.com>",
@@ -15,7 +15,7 @@
   ],
   "peerDependencies": {
     "eslint": "^5.0.0 || ^6.0.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.16.0"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.4.0",

@@ -4,7 +4,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:node/recommended',
     'plugin:jest/recommended',
+    'plugin:jest/style',
     'plugin:unicorn/recommended',
+    'plugin:import/typescript',
     'plugin:promise/recommended',
     'prettier',
     'prettier/@typescript-eslint'
@@ -13,7 +15,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'node', 'jest', 'unicorn', 'promise', 'import'],
   env: {
     es6: true,
-    jest: true
+    'jest/globals': true
   },
   parserOptions: {
     ecmaVersion: 2019,
@@ -60,6 +62,8 @@ module.exports = {
     // ],
 
     'node/exports-style': 'error',
+    'node/no-unpublished-import': 'off',
+    'node/no-missing-import': 'off',
     'node/no-unsupported-features/es-syntax': [
       'warn',
       {
@@ -68,6 +72,7 @@ module.exports = {
     ],
 
     'unicorn/no-abusive-eslint-disable': 'off',
+    'unicorn/no-nested-ternary': 'warn',
     'unicorn/no-process-exit': 'off',
     'unicorn/prevent-abbreviations': 'off',
 

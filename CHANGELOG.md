@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 (November 4, 2019)
+
+- Disable `require-atomic-updates` rule
+
 ## 0.4.1 (October 30, 2019)
 
 - Disable `eslint-plugin-node` rules that conflict with `eslint-plugin-import`

@@ -45,6 +45,8 @@ module.exports = {
     'padding-line-between-statements': ['warn', { blankLine: 'always', prev: '*', next: 'return' }],
     'prefer-const': 'warn',
     'prefer-template': 'warn',
+    // disable atomic updates rule until this issue is resolved: https://github.com/eslint/eslint/issues/11899
+    'require-atomic-updates': 'off',
     'require-await': 'off',
 
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+' }],

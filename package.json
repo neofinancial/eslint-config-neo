@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-neo",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Official Neo Financial ESLint configuration",
   "main": "index.js",
   "author": "Neo Financial Engineering <engineering@neofinancial.com>",
@@ -14,23 +14,25 @@
     "*.js"
   ],
   "peerDependencies": {
-    "eslint": "^5.0.0 || ^6.0.0",
-    "prettier": "^1.16.0"
+    "eslint": "^6.0.0",
+    "prettier": "^1.19.0",
+    "typescript": "^3.7.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.4.0",
-    "@typescript-eslint/parser": "^2.4.0",
-    "eslint-config-prettier": "^6.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.19.0",
+    "eslint-plugin-jest": "^23.0.4",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.1.2",
-    "eslint-plugin-unicorn": "^12.1.0"
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-unicorn": "^13.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
-    "prettier": "^1.18.2"
+    "eslint": "^6.7.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.2"
   }
 }

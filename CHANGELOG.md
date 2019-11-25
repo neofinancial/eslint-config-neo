@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 (November 24, 2019)
+
+- Update `@typescript-eslint` and other dependencies to support optional chaining
+
 ## 0.4.2 (November 4, 2019)
 
 - Disable `require-atomic-updates` rule

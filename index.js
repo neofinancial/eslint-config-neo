@@ -1,26 +1,68 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:node/recommended',
     'plugin:jest/recommended',
     'plugin:jest/style',
     'plugin:unicorn/recommended',
-    'plugin:import/typescript',
     'plugin:promise/recommended',
-    'prettier',
-    'prettier/@typescript-eslint'
+    'prettier'
   ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'node', 'jest', 'unicorn', 'promise', 'import'],
-  env: {
-    es6: true,
-    'jest/globals': true
-  },
+  plugins: ['node', 'jest', 'unicorn', 'promise', 'import'],
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: 'module'
   },
+  env: {
+    es6: true,
+    'jest/globals': true
+  },
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
+      plugins: ['@typescript-eslint'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2019,
+        sourceType: 'module',
+        warnOnUnsupportedTypeScriptVersion: true
+      },
+      // if adding a typescript-eslint version of an existing ESLint rule make sure to disable the ESLint rule here
+      rules: {
+        // 'tsc' already handles this: https://github.com/typescript-eslint/typescript-eslint/issues/291
+        'no-dupe-class-members': 'off',
+        // 'tsc' already handles this: https://github.com/typescript-eslint/typescript-eslint/issues/477
+        'no-undef': 'off',
+        'no-array-constructor': 'off',
+
+        '@typescript-eslint/consistent-type-assertions': 'warn',
+        '@typescript-eslint/explicit-function-return-type': 'error',
+        '@typescript-eslint/no-array-constructor': 'warn',
+        '@typescript-eslint/no-namespace': 'error',
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+' }],
+        // enable this once typescript-eslint 2.9.0 is released
+        // '@typescript-eslint/prefer-optional-chain': 'warn'
+
+        // disabled for performance reasons for now, rules that require type information are very slow
+        // '@typescript-eslint/promise-function-async': [
+        //   "error",
+        //   {
+        //     "checkArrowFunctions": true,
+        //     "checkFunctionDeclarations": true,
+        //     "checkFunctionExpressions": true,
+        //     "checkMethodDeclarations": true
+        //   }
+        // ],
+      }
+    },
+    {
+      files: ['**/test/**/*'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off'
+      }
+    }
+  ],
   rules: {
     eqeqeq: ['error', 'smart'],
     'func-names': ['warn', 'as-needed'],
@@ -42,26 +84,21 @@ module.exports = {
     'no-use-before-define': ['error', 'nofunc'],
     'no-useless-concat': 'warn',
     'no-var': 'warn',
-    'padding-line-between-statements': ['warn', { blankLine: 'always', prev: '*', next: 'return' }],
+    'padding-line-between-statements': [
+      'warn',
+      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'always', prev: '*', next: 'throw' },
+      { blankLine: 'always', prev: '*', next: 'block-like' },
+      { blankLine: 'always', prev: 'block-like', next: '*' },
+      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+      { blankLine: 'always', prev: '*', next: ['const', 'let', 'var'] },
+      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] }
+    ],
     'prefer-const': 'warn',
     'prefer-template': 'warn',
     // disable atomic updates rule until this issue is resolved: https://github.com/eslint/eslint/issues/11899
     'require-atomic-updates': 'off',
     'require-await': 'off',
-
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+' }],
-    '@typescript-eslint/explicit-function-return-type': 'error',
-
-    // disabled for performance reasons for now, rules that require type information are very slow
-    // '@typescript-eslint/promise-function-async': [
-    //   "error",
-    //   {
-    //     "checkArrowFunctions": true,
-    //     "checkFunctionDeclarations": true,
-    //     "checkFunctionExpressions": true,
-    //     "checkMethodDeclarations": true
-    //   }
-    // ],
 
     'node/exports-style': 'error',
     'node/no-unpublished-import': 'off',
@@ -92,24 +129,13 @@ module.exports = {
     'import/order': [
       'warn',
       {
-        groups: [['builtin', 'external'], ['sibling', 'parent']],
+        groups: [
+          ['builtin', 'external'],
+          ['sibling', 'parent']
+        ],
         'newlines-between': 'always-and-inside-groups'
       }
     ],
-    'import/newline-after-import': ['warn']
-  },
-  overrides: [
-    {
-      files: ['*.js', '*.jsx'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off'
-      }
-    },
-    {
-      files: ['**/test/**/*'],
-      rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off'
-      }
-    }
-  ]
+    'import/newline-after-import': 'warn'
+  }
 };

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1 (November 27, 2019)
+
+- Disable `unicorn/catch-error-name` rule
+- Disable `unicorn/consistent-function-scoping` rule
+
 ## 0.5.0 (November 24, 2019)
 
 - Update `@typescript-eslint` and other dependencies to support optional chaining

@@ -135,6 +135,6 @@ Yes. That's ok. Use a single-line disable.
 1. Update the version in `package.json`
 1. Create a `CHANGELOG` entry
 1. Commit your changes
-1. `npm pack` to see what will be published then delete the `.tgz` file that was created
+1. `npm pack --dry-run` to see what will be published
 1. `npm publish`
 1. Create a release on GitHub. Use the version as the tag and release name. For example for version `1.0.0` the tag and release name would be `v1.0.0`. Add the `CHANGELOG` details to the release.

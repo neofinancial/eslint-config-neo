@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.2 (January 9, 2020)
+
+- Add `varsIgnorePattern` to `@typescript-eslint/no-unused-vars` rule
+
 ## 0.5.1 (November 27, 2019)
 
 - Disable `unicorn/catch-error-name` rule

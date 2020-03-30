@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.3 (March 30, 2020)
+
+- Add `Error` and `ApolloError` to `@typescript-eslint/ban-types` rule
+
 ## 0.5.2 (January 9, 2020)
 
 - Add `varsIgnorePattern` to `@typescript-eslint/no-unused-vars` rule

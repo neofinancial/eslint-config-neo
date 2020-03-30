@@ -1,3 +1,5 @@
+const neoErrorRuleMessage = 'User neo errors instead';
+
 module.exports = {
   extends: [
     'eslint:recommended',
@@ -40,7 +42,16 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/no-array-constructor': 'warn',
         '@typescript-eslint/no-namespace': 'error',
-        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }]
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
+        '@typescript-eslint/ban-types': [
+          'error',
+          {
+            'types': {
+              'Error': neoErrorRuleMessage,
+              'ApolloError': neoErrorRuleMessage
+            }
+          }
+        ]
         // enable this once typescript-eslint 2.9.0 is released
         // '@typescript-eslint/prefer-optional-chain': 'warn'
 

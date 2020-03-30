@@ -44,7 +44,7 @@ module.exports = {
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
         '@typescript-eslint/ban-types': [
-          'error',
+          'warn',
           {
             'types': {
               'Error': neoErrorRuleMessage,

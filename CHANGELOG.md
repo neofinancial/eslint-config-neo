@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.6.0 (November 20, 2020)
+## 0.6.0 (November 21, 2020)
 
 - Update dependencies to support TypeScript 4, ESLint 7 and Prettier 2
 - Add `config-backend-next` and `config-frontend-next` with rules being considered for a future release

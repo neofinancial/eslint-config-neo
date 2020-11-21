@@ -16,6 +16,14 @@ module.exports = {
         ],
         '@typescript-eslint/require-await': 'error',
         '@typescript-eslint/return-await': 'error',
+
+        'unicorn/no-null': 'warn',
+      },
+    },
+    {
+      files: ['**/test/**/*'],
+      rules: {
+        'unicorn/no-null': 'off',
       },
     },
   ],

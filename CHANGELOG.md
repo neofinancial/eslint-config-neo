@@ -4,14 +4,12 @@
 
 - Update dependencies to support TypeScript 4, ESLint 7 and Prettier 2
 - Add `config-backend-next` and `config-frontend-next` with rules being considered for a future release
-- Enable `@typescript-eslint/no-unused-before-define` rule in TypeScript files
-- Enable `@typescript-eslint/prefer-optional-chain` rule
-- Enable `unicorn/no-null` rule
-- Enable `unicorn/no-reduce` rule
-- Enable `unicorn/prefer-optional-catch-binding` rule
+- Enable `@typescript-eslint/no-unused-before-define` rule as error in TypeScript files
+- Enable `@typescript-eslint/prefer-optional-chain` rule as warning
+- Enable `unicorn/no-reduce` rule as warning
+- Enable `unicorn/prefer-optional-catch-binding` rule as warning
 - Disable `@typescript-eslint/explicit-module-boundary-types` rule in test files
 - Disable `@typescript-eslint/no-empty-function` rule in test files
-- Disable `unicorn/no-null` rule in test files
 
 ## 0.5.2 (January 9, 2020)
 

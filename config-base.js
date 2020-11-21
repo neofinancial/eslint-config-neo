@@ -44,20 +44,6 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
         '@typescript-eslint/no-use-before-define': ['error', { typedefs: false, enums: false }],
         '@typescript-eslint/prefer-optional-chain': 'warn',
-
-        // disabled for performance reasons for now, rules that require type information are very slow
-        // '@typescript-eslint/promise-function-async': [
-        //   "error",
-        //   {
-        //     'allowedPromiseNames': ['Thenable'],
-        //     'checkArrowFunctions': true,
-        //     'checkFunctionDeclarations': true,
-        //     'checkFunctionExpressions': true,
-        //     'checkMethodDeclarations': true
-        //   }
-        // ],
-        // '@typescript-eslint/require-await': 'error',
-        // '@typescript-eslint/return-await': 'error',
       },
     },
     {
@@ -122,7 +108,6 @@ module.exports = {
     'unicorn/no-abusive-eslint-disable': 'off',
     'unicorn/no-fn-reference-in-iterator': 'off',
     'unicorn/no-nested-ternary': 'warn',
-    'unicorn/no-null': 'warn',
     'unicorn/no-process-exit': 'off',
     'unicorn/no-reduce': 'warn',
     'unicorn/prefer-optional-catch-binding': 'warn',

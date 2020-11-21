@@ -6,16 +6,16 @@ module.exports = {
     'plugin:jest/style',
     'plugin:unicorn/recommended',
     'plugin:promise/recommended',
-    'prettier'
+    'prettier',
   ],
   plugins: ['node', 'jest', 'unicorn', 'promise', 'import'],
   parserOptions: {
     ecmaVersion: 2019,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   env: {
     es6: true,
-    'jest/globals': true
+    'jest/globals': true,
   },
   overrides: [
     {
@@ -26,7 +26,7 @@ module.exports = {
       parserOptions: {
         ecmaVersion: 2019,
         sourceType: 'module',
-        warnOnUnsupportedTypeScriptVersion: true
+        warnOnUnsupportedTypeScriptVersion: true,
       },
       // if adding a typescript-eslint version of an existing ESLint rule make sure to disable the ESLint rule here
       rules: {
@@ -34,34 +34,41 @@ module.exports = {
         'no-dupe-class-members': 'off',
         // 'tsc' already handles this: https://github.com/typescript-eslint/typescript-eslint/issues/477
         'no-undef': 'off',
+        'no-use-before-define': 'off',
         'no-array-constructor': 'off',
 
         '@typescript-eslint/consistent-type-assertions': 'warn',
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/no-array-constructor': 'warn',
         '@typescript-eslint/no-namespace': 'error',
-        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }]
-        // enable this once typescript-eslint 2.9.0 is released
-        // '@typescript-eslint/prefer-optional-chain': 'warn'
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
+        '@typescript-eslint/no-use-before-define': ['error', { typedefs: false, enums: false }],
+        '@typescript-eslint/prefer-optional-chain': 'warn',
 
         // disabled for performance reasons for now, rules that require type information are very slow
         // '@typescript-eslint/promise-function-async': [
         //   "error",
         //   {
-        //     "checkArrowFunctions": true,
-        //     "checkFunctionDeclarations": true,
-        //     "checkFunctionExpressions": true,
-        //     "checkMethodDeclarations": true
+        //     'allowedPromiseNames': ['Thenable'],
+        //     'checkArrowFunctions': true,
+        //     'checkFunctionDeclarations': true,
+        //     'checkFunctionExpressions': true,
+        //     'checkMethodDeclarations': true
         //   }
         // ],
-      }
+        // '@typescript-eslint/require-await': 'error',
+        // '@typescript-eslint/return-await': 'error',
+      },
     },
     {
       files: ['**/test/**/*'],
       rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off'
-      }
-    }
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        'unicorn/no-null': 'off',
+      },
+    },
   ],
   rules: {
     eqeqeq: ['error', 'smart'],
@@ -92,7 +99,7 @@ module.exports = {
       { blankLine: 'always', prev: 'block-like', next: '*' },
       { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
       { blankLine: 'always', prev: '*', next: ['const', 'let', 'var'] },
-      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] }
+      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
     ],
     'prefer-const': 'warn',
     'prefer-template': 'warn',
@@ -106,15 +113,19 @@ module.exports = {
     'node/no-unsupported-features/es-syntax': [
       'warn',
       {
-        ignores: ['modules']
-      }
+        ignores: ['modules'],
+      },
     ],
 
     'unicorn/catch-error-name': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/no-abusive-eslint-disable': 'off',
+    'unicorn/no-fn-reference-in-iterator': 'off',
     'unicorn/no-nested-ternary': 'warn',
+    'unicorn/no-null': 'warn',
     'unicorn/no-process-exit': 'off',
+    'unicorn/no-reduce': 'warn',
+    'unicorn/prefer-optional-catch-binding': 'warn',
     'unicorn/prevent-abbreviations': 'off',
 
     'import/no-restricted-paths': ['error', { zones: [{ target: './src', from: './test' }] }],
@@ -125,19 +136,19 @@ module.exports = {
       {
         devDependencies: ['**/test/**/*', '**/webpack.*.js'],
         optionalDependencies: false,
-        peerDependencies: false
-      }
+        peerDependencies: false,
+      },
     ],
     'import/order': [
       'warn',
       {
         groups: [
           ['builtin', 'external'],
-          ['sibling', 'parent']
+          ['sibling', 'parent'],
         ],
-        'newlines-between': 'always-and-inside-groups'
-      }
+        'newlines-between': 'always-and-inside-groups',
+      },
     ],
-    'import/newline-after-import': 'warn'
-  }
+    'import/newline-after-import': 'warn',
+  },
 };

@@ -73,7 +73,7 @@ Add the engines field to `package.json`
 
 ```json
 "engines": {
-  "node": "^10.10.0"
+  "node": "^12.0.0"
 }
 ```
 

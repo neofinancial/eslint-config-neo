@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.6.0 (November 20, 2020)
+
+- Update dependencies to support TypeScript 4, ESLint 7 and Prettier 2
+- Enable `@typescript-eslint/no-unused-before-define` rule in TypeScript files
+- Enable `@typescript-eslint/prefer-optional-chain` rule
+- Enable `unicorn/no-null` rule
+- Enable `unicorn/no-reduce` rule
+- Enable `unicorn/prefer-optional-catch-binding` rule
+- Disable `@typescript-eslint/explicit-module-boundary-types` rule in test files
+- Disable `@typescript-eslint/no-empty-function` rule in test files
+- Disable `unicorn/no-null` rule in test files
+
 ## 0.5.2 (January 9, 2020)
 
 - Add `varsIgnorePattern` to `@typescript-eslint/no-unused-vars` rule

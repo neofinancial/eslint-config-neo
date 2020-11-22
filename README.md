@@ -2,6 +2,17 @@
 
 Official Neo Financial ESLint configuration
 
+## Available Configs
+
+This package includes 4 different ESLint configs:
+
+- `config-backend`
+- `config-frontend`
+- `config-backend-next`
+- `config-frontend-next`
+
+The `next` versions include some rules that are being considered for inclusion in future versions of the base config. The `next` configs also require you to specify the `project` setting in `parserOptions` for TypeScript projects. The will make ESLint run slower in TypeScript projects.
+
 ## Installation
 
 ### Install Package
@@ -29,6 +40,19 @@ Add `.eslintrc` to project root
 ```
 
 _Use `eslint-config-neo/config-frontend` for frontend projects_
+
+### Optional: Configure `parserOptions` with `next` configs
+
+If you're using one of the `next` configs you must set the `project` option to include _all_ of your `tsconfig.json` files:
+
+```json
+{
+  "extends": "eslint-config-neo/config-backend",
+  "parserOptions": {
+    "project": ["tsconfig.json", "test/tsconfig.json"]
+  }
+}
+```
 
 ### Make Prettier Config File
 

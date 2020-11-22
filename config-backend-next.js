@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./config-base.js'],
+  extends: ['./config-base-next.js'],
   env: {
     node: true,
     mongo: true,

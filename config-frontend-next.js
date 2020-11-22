@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./config-base.js', 'plugin:react/recommended'],
+  extends: ['./config-base-next.js', 'plugin:react/recommended'],
   plugins: ['node', 'react', 'react-hooks'],
   env: {
     browser: true,

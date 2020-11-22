@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1 (November 22, 2020)
+
+- Disable `no-null` rule in base config
+
 ## 0.6.0 (November 22, 2020)
 
 - Update dependencies to support TypeScript 4, ESLint 7 and Prettier 2

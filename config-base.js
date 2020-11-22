@@ -108,6 +108,7 @@ module.exports = {
     'unicorn/no-abusive-eslint-disable': 'off',
     'unicorn/no-fn-reference-in-iterator': 'off',
     'unicorn/no-nested-ternary': 'warn',
+    'unicorn/no-null': 'off',
     'unicorn/no-process-exit': 'off',
     'unicorn/no-reduce': 'warn',
     'unicorn/prefer-optional-catch-binding': 'warn',

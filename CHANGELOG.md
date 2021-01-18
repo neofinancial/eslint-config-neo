@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.7.0 (January 18, 2021)
+## 0.6.2 (January 18, 2021)
 
 - Add `no-floating-promises` to config-backend-next
 

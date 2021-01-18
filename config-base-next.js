@@ -11,21 +11,21 @@ module.exports = {
             checkArrowFunctions: true,
             checkFunctionDeclarations: true,
             checkFunctionExpressions: true,
-            checkMethodDeclarations: true
-          }
+            checkMethodDeclarations: true,
+          },
         ],
         '@typescript-eslint/require-await': 'error',
         '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/return-await': 'error',
 
-        'unicorn/no-null': 'warn'
-      }
+        'unicorn/no-null': 'warn',
+      },
     },
     {
       files: ['**/test/**/*'],
       rules: {
-        'unicorn/no-null': 'off'
-      }
-    }
-  ]
+        'unicorn/no-null': 'off',
+      },
+    },
+  ],
 };

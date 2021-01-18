@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0 (January 18, 2021)
+
+- Add `no-floating-promises` to config-backend-next
+
 ## 0.6.1 (November 22, 2020)
 
 - Disable `no-null` rule in base config

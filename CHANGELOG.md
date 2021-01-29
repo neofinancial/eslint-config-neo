@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.2 (January 29, 2021)
+
+- Disable `no-useless-undefined` rule in tests
+- Disable `unicorn/prefer-set-has` rule
+- Disable `unicorn/prefer-trim-start-end` rule
+
 ## 0.6.1 (November 22, 2020)
 
 - Disable `no-null` rule in base config

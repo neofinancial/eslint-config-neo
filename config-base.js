@@ -53,6 +53,7 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-empty-function': 'off',
         'unicorn/no-null': 'off',
+        'unicorn/no-useless-undefined': 'off',
       },
     },
   ],
@@ -112,7 +113,10 @@ module.exports = {
     'unicorn/no-process-exit': 'off',
     'unicorn/no-reduce': 'warn',
     'unicorn/prefer-optional-catch-binding': 'warn',
+    'unicorn/prefer-set-has': 'off',
     'unicorn/prefer-ternary': 'off',
+    // this rule requires a TypeScript lib target of es2019 or later
+    'unicorn/prefer-trim-start-end': 'off',
     'unicorn/prevent-abbreviations': 'off',
 
     'import/no-restricted-paths': ['error', { zones: [{ target: './src', from: './test' }] }],

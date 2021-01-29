@@ -20,11 +20,5 @@ module.exports = {
         'unicorn/no-null': 'warn',
       },
     },
-    {
-      files: ['**/test/**/*'],
-      rules: {
-        'unicorn/no-null': 'off',
-      },
-    },
   ],
 };

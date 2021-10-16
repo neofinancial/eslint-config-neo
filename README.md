@@ -17,16 +17,16 @@ The `next` versions include some rules that are being considered for inclusion i
 
 ### Install Package
 
-`npm install --dev eslint-config-neo`
+`npm install --save-dev eslint-config-neo`
 
 You can also install a specific version of the package by appending the version tag. For example, to install version `1.0.0`
 
-`npm install --dev eslint-config-neo@1.0.0`
+`npm install --save-dev eslint-config-neo@1.0.0`
 
 ### Install Peer Dependencies
 
 ```sh
-npm install --dev eslint prettier lint-staged husky typescript
+npm install --save-dev eslint prettier lint-staged husky typescript
 ```
 
 ### Make ESLint Config File

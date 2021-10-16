@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.3 (October 16, 2021)
+
+- Switch to npm
+- Upgrade dependencies
+
 ## 0.6.2 (January 29, 2021)
 
 - Disable `no-useless-undefined` rule in tests

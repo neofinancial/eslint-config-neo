@@ -17,16 +17,16 @@ The `next` versions include some rules that are being considered for inclusion i
 
 ### Install Package
 
-`yarn add --dev eslint-config-neo`
+`npm install --dev eslint-config-neo`
 
 You can also install a specific version of the package by appending the version tag. For example, to install version `1.0.0`
 
-`yarn add --dev eslint-config-neo@1.0.0`
+`npm install --dev eslint-config-neo@1.0.0`
 
 ### Install Peer Dependencies
 
 ```sh
-yarn add --dev eslint prettier lint-staged husky typescript
+npm install --dev eslint prettier lint-staged husky typescript
 ```
 
 ### Make ESLint Config File
@@ -142,7 +142,7 @@ Add a precommit hook to `package.json` to automatically lint and format any file
 
 If you've added Prettier to an existing project you will want to format all the code. The precommit hook only updates files that have been changed and staged for commit. To format the entire codebase run
 
-`yarn format`
+`npm install format`
 
 ## FAQ
 

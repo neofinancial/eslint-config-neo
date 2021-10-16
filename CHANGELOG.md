@@ -1,9 +1,9 @@
 # Changelog
 
-## 0.6.3 (October 16, 2021)
+## 0.7.0 (October 16, 2021)
 
 - Switch to npm
-- Upgrade dependencies
+- Upgrade plugins/dependencies
 
 ## 0.6.2 (January 29, 2021)
 

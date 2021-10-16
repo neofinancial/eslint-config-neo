@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-neo",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "description": "Official Neo Financial ESLint configuration",
   "main": "index.js",
   "author": "Neo Financial Engineering <engineering@neofinancial.com>",
@@ -37,7 +37,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-unicorn": "^23.0.0",
+    "eslint-plugin-unicorn": "^37.0.1",
     "husky": "^4.3.0",
     "pretty-quick": "^3.1.0"
   },

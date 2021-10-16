@@ -142,7 +142,7 @@ Add a precommit hook to `package.json` to automatically lint and format any file
 
 If you've added Prettier to an existing project you will want to format all the code. The precommit hook only updates files that have been changed and staged for commit. To format the entire codebase run
 
-`npm install format`
+`npm run format`
 
 ## FAQ
 

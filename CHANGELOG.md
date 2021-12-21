@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0 (December 21, 2021)
+
+- Switch to npm and upgrade dependencies
+
 ## 0.6.2 (January 29, 2021)
 
 - Disable `no-useless-undefined` rule in tests

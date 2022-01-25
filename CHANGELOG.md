@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.3 (January 25, 2022)
+
+- Disable `@typescript-eslint/interface-name-prefix` rule
+
 ## 0.6.2 (January 29, 2021)
 
 - Disable `no-useless-undefined` rule in tests

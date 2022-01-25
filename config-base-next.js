@@ -11,14 +11,14 @@ module.exports = {
             checkArrowFunctions: true,
             checkFunctionDeclarations: true,
             checkFunctionExpressions: true,
-            checkMethodDeclarations: true,
-          },
+            checkMethodDeclarations: true
+          }
         ],
         '@typescript-eslint/require-await': 'error',
         '@typescript-eslint/return-await': 'error',
-
-        'unicorn/no-null': 'warn',
-      },
-    },
-  ],
+        '@typescript-eslint/interface-name-prefix': 'off',
+        'unicorn/no-null': 'warn'
+      }
+    }
+  ]
 };

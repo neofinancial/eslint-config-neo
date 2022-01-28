@@ -6,5 +6,6 @@ module.exports = {
   },
   rules: {
     'node/no-unpublished-require': 'warn',
-  },
+    '@typescript-eslint/interface-name-prefix': 'off',
+  }
 };

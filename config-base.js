@@ -20,7 +20,7 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
-      extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
       plugins: ['@typescript-eslint'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
@@ -37,9 +37,11 @@ module.exports = {
         'no-use-before-define': 'off',
         'no-array-constructor': 'off',
 
-        '@typescript-eslint/consistent-type-assertions': 'warn',
+        //TODO: change to { assertionStyle: 'never' } when config-dug supports primitive types
+        '@typescript-eslint/consistent-type-assertions': ['error', { assertionStyle: 'as', objectLiteralTypeAssertions: 'never'  }],
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/no-array-constructor': 'warn',
+        '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
         '@typescript-eslint/no-use-before-define': ['error', { typedefs: false, enums: false }],
@@ -49,10 +51,11 @@ module.exports = {
     {
       files: ['**/test/**/*'],
       rules: {
+        '@typescript-eslint/consistent-type-assertions': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-empty-function': 'off',
-        'unicorn/no-null': 'off',
+        '@typescript-eslint/require-await': 'off',
         'unicorn/no-useless-undefined': 'off',
       },
     },
@@ -62,6 +65,7 @@ module.exports = {
     'func-names': ['warn', 'as-needed'],
     'no-bitwise': 'warn',
     'no-console': 'warn',
+    'no-default-export': 'off',
     'no-duplicate-imports': 'error',
     'no-eval': 'error',
     'no-extra-bind': 'warn',
@@ -71,6 +75,7 @@ module.exports = {
     'no-new-require': 'error',
     'no-param-reassign': 'error',
     'no-process-exit': 'off',
+    'no-restricted-imports': 'off', // use @typescript-eslint/no-restricted-imports instead
     'no-return-await': 'error',
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
@@ -92,7 +97,7 @@ module.exports = {
     'prefer-template': 'warn',
     // disable atomic updates rule until this issue is resolved: https://github.com/eslint/eslint/issues/11899
     'require-atomic-updates': 'off',
-    'require-await': 'off',
+    'require-await': 'off', // use @typescript-eslint/no-floating-promises instead
 
     'node/exports-style': 'error',
     'node/no-unpublished-import': 'off',
@@ -107,19 +112,32 @@ module.exports = {
     'unicorn/catch-error-name': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/no-abusive-eslint-disable': 'off',
+    'unicorn/no-array-callback-reference': 'off',
+    'unicorn/no-array-for-each': 'off',
+    'unicorn/no-await-expression-member': 'off',
     'unicorn/no-fn-reference-in-iterator': 'off',
+    'unicorn/no-lonely-if': 'off',
     'unicorn/no-nested-ternary': 'warn',
     'unicorn/no-null': 'off',
     'unicorn/no-process-exit': 'off',
     'unicorn/no-reduce': 'warn',
+    'unicorn/numeric-separators-style': 'off',
+    'unicorn/prefer-module': 'off',
+    'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-optional-catch-binding': 'warn',
     'unicorn/prefer-set-has': 'off',
+    'unicorn/prefer-array-some': 'off',
     'unicorn/prefer-ternary': 'off',
+    'unicorn/prefer-top-level-await': 'off',
     // this rule requires a TypeScript lib target of es2019 or later
     'unicorn/prefer-trim-start-end': 'off',
     'unicorn/prevent-abbreviations': 'off',
-
-    'import/no-restricted-paths': ['error', { zones: [{ target: './src', from: './test' }] }],
+    'unicorn/text-encoding-identifier-case': 'off',
+    'import/no-restricted-paths': ['error', {
+      zones: [
+        { target: './src', from: './test', message: 'Test code - Cannot import from test in the src code' }
+      ]
+    }],
     'import/no-absolute-path': 'error',
     'import/no-useless-path-segments': 'error',
     'import/no-extraneous-dependencies': [

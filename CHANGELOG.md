@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 (July 7, 2022)
+
+- Use eslint version 8
+- Added Hex import restrictions rules
+- Added library import restrictions rules
+
 ## 0.6.3 (January 25, 2022)
 
 - Disable `@typescript-eslint/interface-name-prefix` rule

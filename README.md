@@ -17,11 +17,11 @@ The `next` versions include some rules that are being considered for inclusion i
 
 ### Install Package
 
-`npm add --dev eslint-config-neo`
+`npm install --save-dev eslint-config-neo`
 
 You can also install a specific version of the package by appending the version tag. For example, to install version `1.0.0`
 
-`npm add --dev eslint-config-neo@1.0.0`
+`npm install --save-dev eslint-config-neo@1.0.0`
 
 ### Install Peer Dependencies
 

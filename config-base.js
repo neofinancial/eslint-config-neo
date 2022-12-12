@@ -112,11 +112,9 @@ module.exports = {
     'unicorn/catch-error-name': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/no-abusive-eslint-disable': 'off',
-    'unicorn/no-array-callback-reference': 'off',
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-await-expression-member': 'off',
     'unicorn/no-fn-reference-in-iterator': 'off',
-    'unicorn/no-lonely-if': 'off',
     'unicorn/no-nested-ternary': 'warn',
     'unicorn/no-null': 'off',
     'unicorn/no-process-exit': 'off',
@@ -126,13 +124,11 @@ module.exports = {
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-optional-catch-binding': 'warn',
     'unicorn/prefer-set-has': 'off',
-    'unicorn/prefer-array-some': 'off',
     'unicorn/prefer-ternary': 'off',
     'unicorn/prefer-top-level-await': 'off',
     // this rule requires a TypeScript lib target of es2019 or later
     'unicorn/prefer-trim-start-end': 'off',
     'unicorn/prevent-abbreviations': 'off',
-    'unicorn/text-encoding-identifier-case': 'off',
     'import/no-restricted-paths': ['error', {
       zones: [
         { target: './src', from: './test', message: 'Test code - Cannot import from test in the src code' }

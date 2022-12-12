@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 (July 7, 2022)
+## 0.7.0 (December 12, 2022)
 
 - Use eslint version 8
 - Added Hex import restrictions rules

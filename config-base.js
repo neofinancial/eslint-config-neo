@@ -58,7 +58,7 @@ module.exports = {
     },
   ],
   rules: {
-    curly: ['all'],
+    curly: 'error',
     eqeqeq: ['error', 'smart'],
     'func-names': ['warn', 'as-needed'],
     'no-bitwise': 'warn',

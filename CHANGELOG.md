@@ -6,6 +6,10 @@
 - Added Hex import restrictions rules
 - Added library import restrictions rules
 
+## 0.6.4 (February 22, 2023)
+
+- Enforce curlies on `if...else` statements with the `curly` rule
+
 ## 0.6.3 (January 25, 2022)
 
 - Disable `@typescript-eslint/interface-name-prefix` rule

@@ -7,19 +7,18 @@ module.exports = {
   rules: {
     'node/no-unpublished-require': 'warn',
     '@typescript-eslint/interface-name-prefix': 'off',
-    "@typescript-eslint/no-empty-interface": 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-restricted-imports': [
       'error',
       {
         paths: [
           {
             name: 'lodash',
-            message:
-              "Please use `import [package] from 'lodash/[package]'` instead."
-          }
+            message: "Please use `import [package] from 'lodash/[package]'` instead.",
+          },
         ],
-        patterns: ['!lodash/*']
-      }
+        patterns: ['!lodash/*'],
+      },
     ],
     'import/no-restricted-paths': [
       'error',
@@ -54,68 +53,90 @@ module.exports = {
           {
             target: './src',
             from: './test',
-            message: 'Test code - Cannot import from test in the src code'
+            message: 'Test code - Cannot import from test in the src code',
           },
           {
             target: './test/domain',
             from: './src/infrastructure',
-            message: 'Hex: domain layer cannot know about the infrastructure layer, even in tests'
+            message: 'Hex: domain layer cannot know about the infrastructure layer, even in tests',
           },
           {
             target: './test/domain',
             from: './src/configuration',
-            message: 'Hex: domain layer cannot know about the configuration layer, even in tests'
+            message: 'Hex: domain layer cannot know about the configuration layer, even in tests',
           },
           {
             target: './test/domain',
             from: './src/application',
-            message: 'Hex: domain layer cannot know about the application layer, even in tests'
+            message: 'Hex: domain layer cannot know about the application layer, even in tests',
           },
           {
             target: './test/infrastructure',
             from: './src/application',
-            message: 'Hex: infrastructure layer cannot know about the application layer, even in tests'
+            message: 'Hex: infrastructure layer cannot know about the application layer, even in tests',
           },
           {
             target: './test/application',
             from: './src/infrastructure',
-            message: 'Hex: application layer cannot know about the infrastructure layer, even in tests'
-          }
+            message: 'Hex: application layer cannot know about the infrastructure layer, even in tests',
+          },
         ],
       },
     ],
   },
   overrides: [
     {
-      files: [ './src/domain/**/*' ],
+      files: ['./src/domain/**/*'],
       rules: {
         '@typescript-eslint/no-restricted-imports': [
           'error',
           {
-            name: 'aws-sdk',
-            message: 'Hex: domain layer can only know type details from infrastructure (AWS). Try `import type { Thing } from "aws-sdk"`',
-            allowTypeImports: true
+            name: '@neofinancial/neo-framework',
+            importNames: ['!BaseRepositoryPort'],
+            message: 'Hex: domain layer cannot know infrastructure details (MongoDB)',
           },
           {
             name: 'mongodb',
-            message: 'Hex: domain layer can only know type details from infrastructure (MongoDB). Try `import type { Thing } from "mongodb"`',
-            allowTypeImports: true
+            message: 'Hex: domain layer cannot know infrastructure details (MongoDB)',
           },
           {
             name: 'mongoose',
-            message: 'Hex: domain layer can only know type details from infrastructure (MongoDB). Try `import type { Thing } from "mongoose"`',
-            allowTypeImports: true
-          }
-        ]
-      }
+            message: 'Hex: domain layer cannot know infrastructure details (MongoDB)',
+          },
+          {
+            name: '@neofinancial/neo-queue',
+            message: 'Hex: domain layer cannot know infrastructure details (queues)',
+          },
+          {
+            name: 'aws-sdk',
+            message: 'Hex: domain layer cannot know infrastructure details (AWS)',
+          },
+          {
+            name: '@neofinancial/neo-qldb',
+            message: 'Hex: domain layer cannot know infrastructure details (QLDB)',
+          },
+          {
+            name: '@neofinancial/neo-redis-client',
+            message: 'Hex: domain layer cannot know infrastructure details (Redis)',
+          },
+          {
+            name: '@neofinancial/neo-s3',
+            message: 'Hex: domain layer cannot know infrastructure details (S3)',
+          },
+          {
+            name: '@neofinancial/neo-elasticsearch',
+            message: 'Hex: domain layer cannot know infrastructure details (Elasticsearch)',
+          },
+        ],
+      },
     },
     {
-      files: [ '**/migrations/**/*' ],
+      files: ['**/migrations/**/*'],
       rules: {
-        "@typescript-eslint/no-unused-vars": "off",
-        "import/no-extraneous-dependencies": "off",
-        "no-console": "off"
-      }
-    }
-  ]
+        '@typescript-eslint/no-unused-vars': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'no-console': 'off',
+      },
+    },
+  ],
 };

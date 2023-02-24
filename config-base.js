@@ -38,7 +38,10 @@ module.exports = {
         'no-array-constructor': 'off',
 
         //TODO: change to { assertionStyle: 'never' } when config-dug supports primitive types
-        '@typescript-eslint/consistent-type-assertions': ['error', { assertionStyle: 'as', objectLiteralTypeAssertions: 'never'  }],
+        '@typescript-eslint/consistent-type-assertions': [
+          'error',
+          { assertionStyle: 'as', objectLiteralTypeAssertions: 'never' },
+        ],
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/no-array-constructor': 'warn',
         '@typescript-eslint/no-floating-promises': 'off',
@@ -130,11 +133,12 @@ module.exports = {
     // this rule requires a TypeScript lib target of es2019 or later
     'unicorn/prefer-trim-start-end': 'off',
     'unicorn/prevent-abbreviations': 'off',
-    'import/no-restricted-paths': ['error', {
-      zones: [
-        { target: './src', from: './test', message: 'Test code - Cannot import from test in the src code' }
-      ]
-    }],
+    'import/no-restricted-paths': [
+      'error',
+      {
+        zones: [{ target: './src', from: './test', message: 'Test code - Cannot import from test in the src code' }],
+      },
+    ],
     'import/no-absolute-path': 'error',
     'import/no-useless-path-segments': 'error',
     'import/no-extraneous-dependencies': [

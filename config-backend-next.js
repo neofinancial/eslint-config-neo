@@ -6,10 +6,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: [ '**/repositories/**/*', '**/models/**/*', '**/migrations/**/*', '**/scripts/**/*' ],
+      files: ['**/repositories/**/*', '**/models/**/*', '**/migrations/**/*', '**/scripts/**/*'],
       rules: {
-        "unicorn/no-null": "off",
-      }
+        'unicorn/no-null': 'off',
+      },
     },
-  ]
+  ],
 };

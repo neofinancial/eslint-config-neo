@@ -53,7 +53,7 @@ module.exports = {
           {
             target: './src',
             from: './test',
-            message: 'Test code - Cannot import from test in the src code',
+            message: 'Test code - Cannot import test code into src',
           },
           {
             target: './test/domain',

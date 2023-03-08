@@ -125,7 +125,7 @@ module.exports = {
     'unicorn/no-null': 'off',
     'unicorn/no-process-exit': 'off',
     'unicorn/no-reduce': 'warn',
-    'unicorn/numeric-separators-style': 'warn',
+    'unicorn/numeric-separators-style': 'off',
     'unicorn/prefer-module': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-optional-catch-binding': 'warn',
@@ -135,6 +135,11 @@ module.exports = {
     // this rule requires a TypeScript lib target of es2019 or later
     'unicorn/prefer-trim-start-end': 'off',
     'unicorn/prevent-abbreviations': 'off',
+    'unicorn/prevent-native-coercion-functions': 'off',
+    'unicorn/consistent-destructuring': 'off',
+    'unicorn/prefer-array-some': 'off',
+    'jest/prefer-to-be': 'off',
+    'unicorn/prefer-export-from': 'off',
     'import/no-restricted-paths': [
       'error',
       {

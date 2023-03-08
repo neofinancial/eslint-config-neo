@@ -13,6 +13,25 @@ This package includes 4 different ESLint configs:
 
 The `next` versions include some rules that are being considered for inclusion in future versions of the base config. The `next` configs also require you to specify the `project` setting in `parserOptions` for TypeScript projects. The will make ESLint run slower in TypeScript projects.
 
+## Relationships Between Configs
+
+```mermaid
+flowchart LR
+    A[config-base]
+    B[config-base-next]
+    C[config-backend]
+    D[config-frontend]
+    E[config-backend-next]
+    F[config-frontend-next]
+    A --> C
+    A --> D
+    A --> B
+    B --> E
+    B --> F
+```
+
+The arrows from left to right illustrate which configs are extended by another config.
+
 ## Installation
 
 ### Install Package

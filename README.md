@@ -26,7 +26,7 @@ You can also install a specific version of the package by appending the version 
 ### Install Peer Dependencies
 
 ```sh
-npm add --dev eslint prettier lint-staged husky typescript
+npm install -D eslint prettier lint-staged husky typescript
 ```
 
 ### Make ESLint Config File
@@ -143,6 +143,11 @@ Add a precommit hook to `package.json` to automatically lint and format any file
 If you've added Prettier to an existing project you will want to format all the code. The precommit hook only updates files that have been changed and staged for commit. To format the entire codebase run
 
 `npm run format`
+
+## Upgrading to version 7
+
+- `npm install -D eslint@latest eslint-config-neo@latest`
+- for backend services, delete the domain-specific `eslintrc`
 
 ## FAQ
 

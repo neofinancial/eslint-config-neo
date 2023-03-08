@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.7.0 (February 24, 2023)
+## 0.7.0 (March 1, 2023)
 
 - Use eslint version 8
 - Added Hex import restrictions rules

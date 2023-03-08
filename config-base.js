@@ -49,6 +49,8 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
         '@typescript-eslint/no-use-before-define': ['error', { typedefs: false, enums: false }],
         '@typescript-eslint/prefer-optional-chain': 'warn',
+        'unicorn/no-null': 'off',
+        'unicorn/no-useless-undefined': 'off',
       },
     },
     {
@@ -123,7 +125,7 @@ module.exports = {
     'unicorn/no-null': 'off',
     'unicorn/no-process-exit': 'off',
     'unicorn/no-reduce': 'warn',
-    'unicorn/numeric-separators-style': 'off',
+    'unicorn/numeric-separators-style': 'on',
     'unicorn/prefer-module': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-optional-catch-binding': 'warn',

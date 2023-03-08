@@ -1,3 +1,3 @@
 module.exports = {
-  '*.{ts,js}': 'prettier --list-different',
+  '*.{ts,js}': 'prettier --write',
 };

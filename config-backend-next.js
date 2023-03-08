@@ -7,9 +7,6 @@ module.exports = {
   overrides: [
     {
       files: ['**/repositories/**/*', '**/models/**/*', '**/migrations/**/*', '**/scripts/**/*'],
-      rules: {
-        'unicorn/no-null': 'off',
-      },
     },
   ],
 };

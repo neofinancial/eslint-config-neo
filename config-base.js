@@ -125,7 +125,7 @@ module.exports = {
     'unicorn/no-null': 'off',
     'unicorn/no-process-exit': 'off',
     'unicorn/no-reduce': 'warn',
-    'unicorn/numeric-separators-style': 'off',
+    'unicorn/numeric-separators-style': 'warn',
     'unicorn/prefer-module': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-optional-catch-binding': 'warn',

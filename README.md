@@ -180,9 +180,20 @@ Yes. That's ok. Use a single-line disable.
 
 ## Publishing
 
+### For Release
+
 1. Update the version in `package.json`
 1. Create a `CHANGELOG` entry
 1. Commit your changes
 1. `npm pack --dry-run` to see what will be published
 1. `npm publish`
 1. Create a release on GitHub. Use the version as the tag and release name. For example for version `1.0.0` the tag and release name would be `v1.0.0`. Add the `CHANGELOG` details to the release.
+
+### For Development
+
+1. Update the version in `package.json` to be postfixed with `-next.x` where `x` is a number
+
+- for example your first test version might look like `0.7.1-next.0`, second test version would have `next.1`, etc
+
+2. run `npm publish --canary --exact --preid canary --tag=canary`
+3. In the project you wish to test in, run `npm i eslint-config-neo@canary`

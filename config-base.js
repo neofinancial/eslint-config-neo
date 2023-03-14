@@ -20,7 +20,7 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
-      extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+      extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
       plugins: ['@typescript-eslint'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
@@ -138,8 +138,11 @@ module.exports = {
     'unicorn/prevent-native-coercion-functions': 'off',
     'unicorn/consistent-destructuring': 'off',
     'unicorn/prefer-array-some': 'off',
+    'unicorn/text-encoding-identifier-case': 'off',
     'jest/prefer-to-be': 'off',
     'unicorn/prefer-export-from': 'off',
+    'unicorn/no-array-callback-reference': 'off',
+    'unicorn/prefer-switch': 'off',
     'import/no-restricted-paths': [
       'error',
       {

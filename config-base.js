@@ -138,6 +138,8 @@ module.exports = {
     'unicorn/prefer-native-coercion-functions': 'off',
     'unicorn/consistent-destructuring': 'off',
     'unicorn/prefer-array-some': 'off',
+    'unicorn/prefer-spread': 'off',
+    'unicorn/no-new-array': 'off',
     'unicorn/text-encoding-identifier-case': 'off',
     'jest/prefer-to-be': 'off',
     'unicorn/prefer-export-from': 'off',

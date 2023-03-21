@@ -163,10 +163,10 @@ If you've added Prettier to an existing project you will want to format all the 
 
 `npm run format`
 
-## Upgrading to version 7
+## On Upgrading to version 7 or higher
 
-- `npm install -D eslint@latest eslint-config-neo@latest`
-- for backend services, delete the domain-specific `eslintrc`
+- requires `eslint` version `8.26.0` or higher
+- for backend services, you should delete the domain-specific `eslintrc`
 
 ## FAQ
 

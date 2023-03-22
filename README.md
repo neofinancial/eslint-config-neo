@@ -13,20 +13,39 @@ This package includes 4 different ESLint configs:
 
 The `next` versions include some rules that are being considered for inclusion in future versions of the base config. The `next` configs also require you to specify the `project` setting in `parserOptions` for TypeScript projects. The will make ESLint run slower in TypeScript projects.
 
+## Relationships Between Configs
+
+```mermaid
+flowchart LR
+    A[config-base]
+    B[config-base-next]
+    C[config-backend]
+    D[config-frontend]
+    E[config-backend-next]
+    F[config-frontend-next]
+    A --> C
+    A --> D
+    A --> B
+    B --> E
+    B --> F
+```
+
+The arrows from left to right illustrate which configs are extended by another config.
+
 ## Installation
 
 ### Install Package
 
-`yarn add --dev eslint-config-neo`
+`npm install --save-dev eslint-config-neo`
 
 You can also install a specific version of the package by appending the version tag. For example, to install version `1.0.0`
 
-`yarn add --dev eslint-config-neo@1.0.0`
+`npm install --save-dev eslint-config-neo@1.0.0`
 
 ### Install Peer Dependencies
 
 ```sh
-yarn add --dev eslint prettier lint-staged husky typescript
+npm install -D eslint prettier lint-staged husky typescript
 ```
 
 ### Make ESLint Config File
@@ -142,7 +161,12 @@ Add a precommit hook to `package.json` to automatically lint and format any file
 
 If you've added Prettier to an existing project you will want to format all the code. The precommit hook only updates files that have been changed and staged for commit. To format the entire codebase run
 
-`yarn format`
+`npm run format`
+
+## On Upgrading to version 7 or higher
+
+- requires `eslint` version `8.26.0` or higher
+- for backend services, you should delete the domain-specific `eslintrc`
 
 ## FAQ
 
@@ -156,9 +180,20 @@ Yes. That's ok. Use a single-line disable.
 
 ## Publishing
 
+### For Release
+
 1. Update the version in `package.json`
 1. Create a `CHANGELOG` entry
 1. Commit your changes
 1. `npm pack --dry-run` to see what will be published
 1. `npm publish`
 1. Create a release on GitHub. Use the version as the tag and release name. For example for version `1.0.0` the tag and release name would be `v1.0.0`. Add the `CHANGELOG` details to the release.
+
+### For Development
+
+1. Update the version in `package.json` to be postfixed with `-next.x` where `x` is a number
+
+- for example your first test version might look like `0.7.1-next.0`, second test version would have `next.1`, etc
+
+2. run `npm publish --canary --exact --preid canary --tag=canary`
+3. In the project you wish to test in, run `npm i eslint-config-neo@canary`

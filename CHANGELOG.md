@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.0 (March 21, 2023)
+
+- Use eslint version 8
+- Added Hex import restrictions rules
+- Added library import restrictions rules
+
 ## 0.6.4 (February 22, 2023)
 
 - Enforce curlies on `if...else` statements with the `curly` rule

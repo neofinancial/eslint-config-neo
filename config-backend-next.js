@@ -1,10 +1,12 @@
 module.exports = {
-  extends: ['./config-base-next.js'],
+  extends: ['./config-base-next.js', './config-backend.js'],
   env: {
     node: true,
     mongo: true,
   },
-  rules: {
-    'node/no-unpublished-require': 'warn',
-  },
+  overrides: [
+    {
+      files: ['**/repositories/**/*', '**/models/**/*', '**/migrations/**/*', '**/scripts/**/*'],
+    },
+  ],
 };

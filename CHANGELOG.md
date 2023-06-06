@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.8.0 (June 7, 2023)
+
+- Upgraded eslint-plugin-unicorn
+- Upgraded dependencies
+- Added `expiring-todo-comments` rule
+
+## 0.7.0 (March 21, 2023)
+
+- Use eslint version 8
+- Added Hex import restrictions rules
+- Added library import restrictions rules
+
 ## 0.7.0 (March 21, 2023)
 
 - Use eslint version 8

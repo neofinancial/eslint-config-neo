@@ -118,6 +118,12 @@ module.exports = {
 
     'unicorn/catch-error-name': 'off',
     'unicorn/consistent-function-scoping': 'off',
+    'unicorn/expiring-todo-comments': [
+      'warn',
+      {
+        terms: ['todo'],
+      },
+    ],
     'unicorn/no-abusive-eslint-disable': 'off',
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-await-expression-member': 'off',

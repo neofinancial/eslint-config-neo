@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.7.1 (June 7, 2023)
+## 0.8.0 (June 7, 2023)
 
 - Upgraded eslint-plugin-unicorn
 - Upgraded dependencies

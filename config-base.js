@@ -10,8 +10,9 @@ module.exports = {
   ],
   plugins: ['node', 'jest', 'unicorn', 'promise', 'import'],
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 2021,
     sourceType: 'module',
+    project: true,
   },
   env: {
     es6: true,
@@ -24,8 +25,9 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        ecmaVersion: 2019,
+        ecmaVersion: 2021,
         sourceType: 'module',
+        project: true,
         warnOnUnsupportedTypeScriptVersion: true,
       },
       // if adding a typescript-eslint version of an existing ESLint rule make sure to disable the ESLint rule here

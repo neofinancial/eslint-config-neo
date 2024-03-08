@@ -46,7 +46,7 @@ module.exports = {
         ],
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/no-array-constructor': 'warn',
-        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/no-floating-promises': ['error', { ignoreIIFE: true }],
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
         '@typescript-eslint/no-use-before-define': ['error', { typedefs: false, enums: false }],

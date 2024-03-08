@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.1 (March 8, 2024)
+
+- Move `no-floating-promises` rule to the base config.
+- Updated dependencies
+
 ## 0.9.0 (October 27, 2023)
 
 - supporting Typescript v5

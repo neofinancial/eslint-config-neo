@@ -4,7 +4,6 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx'],
       rules: {
-        '@typescript-eslint/no-floating-promises': ['error', { ignoreIIFE: true }],
         '@typescript-eslint/promise-function-async': [
           'error',
           {

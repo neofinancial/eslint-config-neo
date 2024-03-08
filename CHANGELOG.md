@@ -1,9 +1,9 @@
 # Changelog
 
-## 0.9.1 (March 8, 2024)
+## 0.10.0 (March 8, 2024)
 
-- Move `no-floating-promises` rule to the base config.
-- Updated dependencies
+- Move `no-floating-promises` rule to the base config
+- Updated dependencies - requires Prettier 3, TypeScript 5, and ESLint 8
 
 ## 0.9.0 (October 27, 2023)
 

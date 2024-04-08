@@ -8,7 +8,7 @@ module.exports = {
     'plugin:promise/recommended',
     'prettier',
   ],
-  plugins: ['node', 'jest', 'unicorn', 'promise', 'import'],
+  plugins: ['node', 'jest', 'unicorn', 'promise', 'import', 'autofix'],
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',
@@ -177,5 +177,7 @@ module.exports = {
       },
     ],
     'import/newline-after-import': 'warn',
+    'autofix/no-unused-vars': 'warn',
+    'autofix/sort-imports': ['warn', { ignoreCase: true, ignoreDeclarationSort: true }],
   },
 };

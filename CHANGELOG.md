@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.11.0 (April, 9, 2024)
+- adds `eslint-plugin-autofix` package
+- adds `autofix/no-unused-vars` and `autofix/sort-imports` both as warning
+- This changes allows eslint to remove unused imports and to sort the imports in the natural order
+
 ## 0.10.0 (March 8, 2024)
 
 - Move `no-floating-promises` rule to the base config

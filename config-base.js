@@ -177,6 +177,7 @@ module.exports = {
       },
     ],
     'import/newline-after-import': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'autofix/no-unused-vars': 'warn',
     'autofix/sort-imports': ['warn', { ignoreCase: true, ignoreDeclarationSort: true }],
   },

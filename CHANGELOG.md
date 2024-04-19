@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.11.1 (April 19, 2024)
+- adds `@typescript-eslint/no-unused-vars': 'warn'` that fixes the enums with typescript 
+
 ## 0.11.0 (April, 9, 2024)
 - adds `eslint-plugin-autofix` package
 - adds `autofix/no-unused-vars` and `autofix/sort-imports` both as warning

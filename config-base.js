@@ -118,7 +118,6 @@ module.exports = {
         ignores: ['modules'],
       },
     ],
-
     'unicorn/catch-error-name': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/expiring-todo-comments': [
@@ -178,7 +177,7 @@ module.exports = {
       },
     ],
     'import/newline-after-import': 'warn',
-    'autofix/no-unused-vars': ['warn', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
     'autofix/sort-imports': ['warn', { ignoreCase: true, ignoreDeclarationSort: true }],
+    'autofix/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
   },
 };

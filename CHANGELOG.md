@@ -1,8 +1,7 @@
 # Changelog
 
 ## 0.11.1 (April 21, 2024)
-- fixes `autofix/no-unused-vars` rule for no-unused-vars where var matches `^_+`
-- removes `autofix/no-unused-vars` check specifically in migrations directory
+- fixes `autofix/no-unused-vars` rule to match existing rules from `@typescript-eslint/no-unused-vars` 
 
 ## 0.11.0 (April 9, 2024)
 - adds `eslint-plugin-autofix` package

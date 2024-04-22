@@ -49,6 +49,7 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': ['error', { ignoreIIFE: true }],
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
+        'autofix/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
         '@typescript-eslint/no-use-before-define': ['error', { typedefs: false, enums: false }],
         '@typescript-eslint/prefer-optional-chain': 'warn',
         'unicorn/no-null': 'off',
@@ -117,7 +118,6 @@ module.exports = {
         ignores: ['modules'],
       },
     ],
-
     'unicorn/catch-error-name': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/expiring-todo-comments': [
@@ -177,7 +177,6 @@ module.exports = {
       },
     ],
     'import/newline-after-import': 'warn',
-    'autofix/no-unused-vars': 'warn',
     'autofix/sort-imports': ['warn', { ignoreCase: true, ignoreDeclarationSort: true }],
   },
 };

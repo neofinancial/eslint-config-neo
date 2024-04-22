@@ -178,6 +178,5 @@ module.exports = {
     ],
     'import/newline-after-import': 'warn',
     'autofix/sort-imports': ['warn', { ignoreCase: true, ignoreDeclarationSort: true }],
-    'autofix/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
   },
 };

@@ -134,6 +134,7 @@ module.exports = {
       files: ['**/migrations/**/*'],
       rules: {
         '@typescript-eslint/no-unused-vars': 'off',
+        'autofix/no-unused-vars': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-console': 'off',
       },

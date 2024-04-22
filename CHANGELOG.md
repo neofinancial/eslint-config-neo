@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.11.0 (April, 9, 2024)
+## 0.11.1 (April 21, 2024)
+- fixes `autofix/no-unused-vars` rule for no-unused-vars where var matches `^_+`
+- removes `autofix/no-unused-vars` check specifically in migrations directory
+
+## 0.11.0 (April 9, 2024)
 - adds `eslint-plugin-autofix` package
 - adds `autofix/no-unused-vars` and `autofix/sort-imports` both as warning
 - This changes allows eslint to remove unused imports and to sort the imports in the natural order

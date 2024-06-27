@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-neo",
-  "version": "0.11.1",
+  "version": "0.11.3",
   "description": "Official Neo Financial ESLint configuration",
   "main": "index.js",
   "author": "Neo Financial Engineering <engineering@neofinancial.com>",

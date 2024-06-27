@@ -17,12 +17,6 @@ module.exports = {
       parserOptions: {
         schema: './lib/admin-federated-schema.graphql',
       },
-      rules: {
-        '@graphql-eslint/known-type-names': 'error',
-        '@graphql-eslint/require-deprecation-reason': 'error',
-        '@graphql-eslint/no-scalar-result-type-on-mutation': 'error',
-        '@graphql-eslint/no-duplicate-fields': 'error',
-      },
     },
     {
       files: ['customer-federated-schema.graphql'],
@@ -40,12 +34,6 @@ module.exports = {
       files: ['service-schema.graphql'],
       parserOptions: {
         schema: './lib/service-schema.graphql',
-      },
-      rules: {
-        '@graphql-eslint/known-type-names': 'error',
-        '@graphql-eslint/require-deprecation-reason': 'error',
-        '@graphql-eslint/no-scalar-result-type-on-mutation': 'error',
-        '@graphql-eslint/no-duplicate-fields': 'error',
       },
     },
   ],

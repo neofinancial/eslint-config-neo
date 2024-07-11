@@ -1,3 +1,12 @@
+const namingConventionRule = {
+  InputValueDefinition: { style: 'camelCase' },
+  InputObjectTypeDefinition: { style: 'PascalCase', requiredSuffixes: ['Input'] },
+  FieldDefinition: 'camelCase',
+  'FieldDefinition[parent.name.value=Mutation]': { style: 'camelCase', forbiddenSuffixes: ['Mutation'] },
+  'FieldDefinition[parent.name.value=Query]': { style: 'camelCase', forbiddenSuffixes: ['Query'] },
+  allowLeadingUnderscore: true,
+};
+
 module.exports = {
   plugins: ['@graphql-eslint'],
   parser: '@graphql-eslint/eslint-plugin',
@@ -6,6 +15,7 @@ module.exports = {
     '@graphql-eslint/require-deprecation-reason': 'warn',
     '@graphql-eslint/no-scalar-result-type-on-mutation': 'warn',
     '@graphql-eslint/no-duplicate-fields': 'warn',
+    '@graphql-eslint/naming-convention': ['error', namingConventionRule],
   },
   parserOptions: {
     skipGraphQLConfig: true,
@@ -13,15 +23,18 @@ module.exports = {
   ignorePatterns: ['customer-schema.graphql', 'admin-schema.graphql', 'partner-schema.graphql'],
   overrides: [
     {
-      files: ['admin-federated-schema.graphql'],
-      parserOptions: {
-        schema: './lib/admin-federated-schema.graphql',
-      },
-    },
-    {
       files: ['customer-federated-schema.graphql'],
       parserOptions: {
         schema: './lib/customer-federated-schema.graphql',
+      },
+      rules: {
+        '@graphql-eslint/naming-convention': ['warn', namingConventionRule],
+      },
+    },
+    {
+      files: ['admin-federated-schema.graphql'],
+      parserOptions: {
+        schema: './lib/admin-federated-schema.graphql',
       },
     },
     {

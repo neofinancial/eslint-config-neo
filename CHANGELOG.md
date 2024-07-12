@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.11.2 (June 25, 2024)
+## 0.11.2 (July 15, 2024)
 
 - Create ESLint configuration for GraphQL files
 

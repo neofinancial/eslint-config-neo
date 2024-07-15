@@ -12,7 +12,7 @@ module.exports = {
   parser: '@graphql-eslint/eslint-plugin',
   rules: {
     '@graphql-eslint/known-type-names': 'warn',
-    '@graphql-eslint/require-deprecation-reason': 'warn',
+    '@graphql-eslint/require-deprecation-reason': 'error',
     '@graphql-eslint/no-scalar-result-type-on-mutation': 'warn',
     '@graphql-eslint/no-duplicate-fields': 'warn',
     '@graphql-eslint/naming-convention': ['error', namingConventionRule],

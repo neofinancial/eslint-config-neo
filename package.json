@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-neo",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Official Neo Financial ESLint configuration",
   "main": "index.js",
   "author": "Neo Financial Engineering <engineering@neofinancial.com>",
@@ -28,6 +28,7 @@
     "typescript": "^3.7.0 || ^4.0.0 || ^5.0.0"
   },
   "dependencies": {
+    "@graphql-eslint/eslint-plugin": "^3.20.1",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "eslint-config-prettier": "^9.1.0",

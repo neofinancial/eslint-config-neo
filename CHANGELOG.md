@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.11.2 (September 24, 2024)
+- vulnerabilities fixes
+
 ## 0.11.1 (April 21, 2024)
 - fixes `autofix/no-unused-vars` rule to match existing rules from `@typescript-eslint/no-unused-vars` 
 

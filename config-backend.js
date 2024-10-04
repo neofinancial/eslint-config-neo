@@ -36,11 +36,6 @@ module.exports = {
             message: 'Hex Arch - Cannot import from application in the domain layer',
           },
           {
-            target: './src/domain',
-            from: './src/configuration',
-            message: 'Hex Arch - Cannot import from configuration in the domain layer',
-          },
-          {
             target: './src/application',
             from: './src/infrastructure',
             message: 'Hex Arch - Cannot import from infrastructure in the application layer',
@@ -59,11 +54,6 @@ module.exports = {
             target: './test/domain',
             from: './src/infrastructure',
             message: 'Hex: domain layer cannot know about the infrastructure layer, even in tests',
-          },
-          {
-            target: './test/domain',
-            from: './src/configuration',
-            message: 'Hex: domain layer cannot know about the configuration layer, even in tests',
           },
           {
             target: './test/domain',

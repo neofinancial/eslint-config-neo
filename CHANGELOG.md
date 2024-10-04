@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.12.0 (October 4, 2024)
+
+- removed `import/no-restricted-paths` for importing from `src/configuration`
+
 ## 0.11.2 (September 24, 2024)
 - vulnerabilities fixes
 

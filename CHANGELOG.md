@@ -1,16 +1,23 @@
 # Changelog
 
+## 0.12.1 (January 6, 2025)
+
+- vulnerability fixes
+
 ## 0.12.0 (October 4, 2024)
 
 - removed `import/no-restricted-paths` for importing from `src/configuration`
 
 ## 0.11.2 (September 24, 2024)
+
 - vulnerabilities fixes
 
 ## 0.11.1 (April 21, 2024)
-- fixes `autofix/no-unused-vars` rule to match existing rules from `@typescript-eslint/no-unused-vars` 
+
+- fixes `autofix/no-unused-vars` rule to match existing rules from `@typescript-eslint/no-unused-vars`
 
 ## 0.11.0 (April 9, 2024)
+
 - adds `eslint-plugin-autofix` package
 - adds `autofix/no-unused-vars` and `autofix/sort-imports` both as warning
 - This changes allows eslint to remove unused imports and to sort the imports in the natural order

@@ -45,6 +45,7 @@
     "@neofinancial/neo-precommit": "^0.0.3",
     "ccscan": "^1.1.2",
     "eslint": "^8.57.0",
+    "eslint-plugin-security": "^3.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
     "prettier": "^3.2.5",

@@ -9,6 +9,7 @@ module.exports = {
     'plugin:promise/recommended',
     'prettier',
     'plugin:you-dont-need-lodash-underscore/compatible',
+    'plugin:security/recommended-legacy',
   ],
   plugins: ['node', 'jest', 'unicorn', 'promise', 'import', 'autofix'],
   parserOptions: {
@@ -162,6 +163,8 @@ module.exports = {
     'unicorn/prefer-optional-catch-binding': 'warn',
     'unicorn/no-nested-ternary': 'warn',
     'unicorn/no-reduce': 'warn',
+
+    'security/detect-object-injection': 'warn',
 
     // ERROR
     curly: 'error',

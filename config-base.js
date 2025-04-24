@@ -13,7 +13,7 @@ module.exports = {
   ],
   plugins: ['node', 'jest', 'unicorn', 'promise', 'import', 'autofix'],
   parserOptions: {
-    ecmaVersion: 2022,
+    ecmaVersion: 2025,
     sourceType: 'module',
     project: true,
   },
@@ -28,7 +28,7 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        ecmaVersion: 2022,
+        ecmaVersion: 2025,
         sourceType: 'module',
         project: true,
         warnOnUnsupportedTypeScriptVersion: true,

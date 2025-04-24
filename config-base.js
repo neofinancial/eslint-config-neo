@@ -1,5 +1,4 @@
 module.exports = {
-  '*': ['./node_modules/@neofinancial/neo-precommit/check.sh'],
   extends: [
     'eslint:recommended',
     'plugin:node/recommended',

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (April 24, 2025)
+
+- update ecma version
+- patch dependencies
+- add @neofinancial/neo-precommit
+- add eslint-plugin-security
+
 ## 0.12.1 (January 6, 2025)
 
 - vulnerability fixes

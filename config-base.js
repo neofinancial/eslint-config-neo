@@ -1,4 +1,5 @@
 module.exports = {
+  '*': ['./node_modules/@neofinancial/neo-precommit/check.sh'],
   extends: [
     'eslint:recommended',
     'plugin:node/recommended',
@@ -49,6 +50,7 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': ['error', { ignoreIIFE: true }],
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
+        '@typescript-eslint/return-await': ['warn', 'always'],
         'autofix/no-unused-vars': ['error', { argsIgnorePattern: '^_+', varsIgnorePattern: '^_+' }],
         '@typescript-eslint/no-use-before-define': ['error', { typedefs: false, enums: false }],
         '@typescript-eslint/prefer-optional-chain': 'warn',

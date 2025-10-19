@@ -178,5 +178,7 @@ module.exports = {
     ],
     'import/newline-after-import': 'warn',
     'autofix/sort-imports': ['warn', { ignoreCase: true, ignoreDeclarationSort: true }],
+    'consistent-return': 'error',
+    'no-shadow': 'error',
   },
 };

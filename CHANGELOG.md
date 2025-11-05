@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.13.0 (November 5, 2025)
+
+- Migrated to ESLint v9 flat config format - legacy `.eslintrc` files are no longer supported
+- Replaced `eslint-plugin-node` with `eslint-plugin-n`
+- Updated all plugin dependencies to latest ESLint v9 compatible versions
+
 ## 0.12.1 (January 6, 2025)
 
 - vulnerability fixes

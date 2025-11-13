@@ -1,12 +1,7 @@
-module.exports = {
-  extends: ['./config-base-next.js', './config-backend.js'],
-  env: {
-    node: true,
-    mongo: true,
-  },
-  overrides: [
-    {
-      files: ['**/repositories/**/*', '**/models/**/*', '**/migrations/**/*', '**/scripts/**/*'],
-    },
-  ],
-};
+const configBaseNext = require('./config-base-next');
+const configBackend = require('./config-backend');
+
+module.exports = [
+  ...configBaseNext,
+  ...configBackend.slice(1), // Skip the base config since it's already included in configBaseNext
+];

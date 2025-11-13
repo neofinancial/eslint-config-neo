@@ -1,20 +1,31 @@
-module.exports = {
-  extends: ['./config-base.js', 'plugin:react/recommended'],
-  plugins: ['node', 'react', 'react-hooks'],
-  env: {
-    browser: true,
-  },
-  settings: {
-    react: {
-      version: 'detect',
+const reactPlugin = require('eslint-plugin-react');
+const reactHooksPlugin = require('eslint-plugin-react-hooks');
+const globals = require('globals');
+const configBase = require('./config-base');
+
+module.exports = [
+  ...configBase,
+  {
+    plugins: {
+      react: reactPlugin,
+      'react-hooks': reactHooksPlugin,
+    },
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+    rules: {
+      ...reactPlugin.configs.flat.recommended.rules,
+      'n/no-unpublished-require': 'off',
+      'react/prop-types': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
   },
-  rules: {
-    'node/no-unpublished-require': 'off',
-
-    'react/prop-types': 'off',
-
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-  },
-};
+];

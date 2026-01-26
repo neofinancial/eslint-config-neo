@@ -1,0 +1,14 @@
+name: 'Publish latest package version'
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  publish-to-npm:
+    name: Publish to NPM
+    uses: neofinancial/shared-workflows/.github/workflows/publish-to-npm.yml@publish-to-npm-v1
+    secrets: inherit
+    with:
+      package_json_paths: ./package.json
+      environment: production

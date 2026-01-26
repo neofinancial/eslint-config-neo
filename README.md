@@ -180,14 +180,17 @@ Yes. That's ok. Use a single-line disable.
 
 ## Publishing
 
-### For Release
+### Stable Versions
 
-1. Update the version in `package.json`
-1. Create a `CHANGELOG` entry
-1. Commit your changes
-1. `npm pack --dry-run` to see what will be published
-1. `npm publish`
-1. Create a release on GitHub. Use the version as the tag and release name. For example for version `1.0.0` the tag and release name would be `v1.0.0`. Add the `CHANGELOG` details to the release.
+Once your changes have being tested and you're ready to publish a stable version, open your Pull Request, get approvals and just merge it. We have a pipeline that helps you to publish new packages versions automatically. How it works:
+
+1. Pull request is approved and merged into `master` branch;
+1. A Github action is triggered and detects any packages that had changes and requires packages to be published;
+1. A new codebuild execution is triggered into AWS `neo-package-publisher-production`;
+1. Build is executed and packages are published to NPM registry;
+
+> Even though we have an automation set up for this, you should still confirm your package have being published successfully. If you ran into any issues feel free to ask support from your peers or post on #chapter-backend Slack Channel.
+
 
 ### For Development
 

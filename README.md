@@ -4,14 +4,24 @@ Official Neo Financial ESLint configuration
 
 ## Available Configs
 
-This package includes 4 different ESLint configs:
+This package includes 5 different ESLint configs:
 
 - `config-backend`
 - `config-frontend`
 - `config-backend-next`
 - `config-frontend-next`
+- `config-architecture`
 
 The `next` versions include some rules that are being considered for inclusion in future versions of the base config. The `next` configs also require you to specify the `project` setting in `parserOptions` for TypeScript projects. The will make ESLint run slower in TypeScript projects.
+
+### config-architecture (for Biome users)
+
+The `config-architecture` is designed for services that have migrated to **Biome.js** for linting and formatting. It contains ONLY the hexagonal architecture enforcement rules that Biome cannot provide:
+
+- `import/no-restricted-paths` - Enforces layer boundaries (domain, application, infrastructure)
+- `@typescript-eslint/no-restricted-imports` - Enforces lodash tree-shaking and domain isolation
+
+Use this config alongside Biome to maintain architecture enforcement while benefiting from Biome's speed.
 
 ## Relationships Between Configs
 
@@ -23,7 +33,9 @@ flowchart LR
     D[config-frontend]
     E[config-backend-next]
     F[config-frontend-next]
+    G[config-architecture]
     A --> C
+    G --> C
     A --> D
     A --> B
     B --> E
@@ -31,6 +43,9 @@ flowchart LR
 ```
 
 The arrows from left to right illustrate which configs are extended by another config.
+
+- `config-backend` extends both `config-base` and `config-architecture`
+- `config-architecture` is also available standalone for Biome users who only need hexagonal architecture enforcement
 
 ## Installation
 
@@ -190,7 +205,6 @@ Once your changes have being tested and you're ready to publish a stable version
 1. Build is executed and packages are published to NPM registry;
 
 > Even though we have an automation set up for this, you should still confirm your package have being published successfully. If you ran into any issues feel free to ask support from your peers or post on #chapter-backend Slack Channel.
-
 
 ### For Development
 

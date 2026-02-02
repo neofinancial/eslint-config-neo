@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.14.0 (January 29, 2026)
+
+- Refactored `config-backend` to reuse `config-architecture` rules, eliminating duplication
+- `config-backend` now extends both `config-base` and `config-architecture`
+- Updated README to reflect the new relationship between configs
+
 ## 0.13.0 (November 5, 2025)
 
 - Migrated to ESLint v9 flat config format - legacy `.eslintrc` files are no longer supported

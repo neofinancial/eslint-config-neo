@@ -4,6 +4,7 @@ const configBackend = require('./config-backend');
 const configBackendNext = require('./config-backend-next');
 const configFrontend = require('./config-frontend');
 const configFrontendNext = require('./config-frontend-next');
+const configArchitecture = require('./config-architecture');
 
 module.exports = {
   configBase,
@@ -12,6 +13,7 @@ module.exports = {
   configBackendNext,
   configFrontend,
   configFrontendNext,
+  configArchitecture,
   // Default export for backward compatibility
   ...configBase,
 };

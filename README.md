@@ -195,22 +195,43 @@ Yes. That's ok. Use a single-line disable.
 
 ## Publishing
 
-### Stable Versions
+### Alpha versions
+
+Sometimes, testing functionality locally using symlinks can be challenging.
+In such cases, publishing an alpha version for use in other environments can be a practical way to test new changes.
+Luckily, Neo CLI has a built-in command to facilitate this process:
+
+1. Make sure the version in `package.json` is following this format: `<<major>>.<<minor>>.<<patch>>-alpha.<<alpha version>>` (e.g. `1.2.5-alpha.0`, `1.2.5-alpha.1`, etc).
+1. Make sure all changes including the version bump, lock file and your library changes are committed and pushed to your feature branch.
+1. `cd` into your package
+1. Run `neo library publish`
+1. This will kick off [AWS CodeBuild](https://ca-central-1.console.aws.amazon.com/codesuite/codebuild/910646530202/projects/neo-package-publisher-integration/history?region=ca-central-1&builds-meta=eyJmIjp7InRleHQiOiIiLCJzdGF0dXMiOiIifSwicyI6e30sIm4iOjIwLCJpIjowfQ)
+   in the `neo-ci` account and output the logs to your terminal.
+
+> [!TIP]
+> Please note this will only work if you're using a feature branch.
+
+### Beta versions (Release candidate)
+
+On some rare situations we need to test Library changes versions on a few services in Production, before rolling out this change to all services that uses the library. To support it we do allow Beta (Release Candidate) versions to be published through the Codebuild as well, likely Stable versions. How it works:
+
+1. Make sure the version in `package.json` is following this format: `<<major>>.<<minor>>.<<patch>>-beta.<<beta version>>` (e.g. `1.2.5-beta.0`, `1.2.5-beta.1`, etc).
+1. Make sure all changes including the version bump, lock file and your library changes are committed and pushed to your feature branch.
+1. Open a Pull Request targeting the merge to a branch that matches with the following pattern: "\**/*release-candidate\*"
+1. After getting approvals, merge your changes into the Release Candidate branch;
+1. This will kick off [AWS CodeBuild](https://ca-central-1.console.aws.amazon.com/codesuite/codebuild/910646530202/projects/neo-package-publisher-production/history?region=ca-central-1&builds-meta=eyJmIjp7InRleHQiOiIiLCJzdGF0dXMiOiIifSwicyI6e30sIm4iOjIwLCJpIjowfQ)
+   in the `neo-ci` account and output the logs to your terminal.
+1. The new library version will be published using `beta` tag on the NPM registry.
+
+> [!TIP] Even though we have an automation set up for this, you should still confirm your package have being published successfully. If you ran into any issues feel free to ask support from your peers or post on #chapter-backend Slack Channel.
+
+### Stable versions
 
 Once your changes have being tested and you're ready to publish a stable version, open your Pull Request, get approvals and just merge it. We have a pipeline that helps you to publish new packages versions automatically. How it works:
 
 1. Pull request is approved and merged into `master` branch;
 1. A Github action is triggered and detects any packages that had changes and requires packages to be published;
-1. A new codebuild execution is triggered into AWS `neo-package-publisher-production`;
+1. A new [AWS CodeBuild](https://ca-central-1.console.aws.amazon.com/codesuite/codebuild/910646530202/projects/neo-package-publisher-production/history?region=ca-central-1&builds-meta=eyJmIjp7InRleHQiOiIiLCJzdGF0dXMiOiIifSwicyI6e30sIm4iOjIwLCJpIjowfQ) execution is triggered into AWS `neo-package-publisher-production`;
 1. Build is executed and packages are published to NPM registry;
 
-> Even though we have an automation set up for this, you should still confirm your package have being published successfully. If you ran into any issues feel free to ask support from your peers or post on #chapter-backend Slack Channel.
-
-### For Development
-
-1. Update the version in `package.json` to be postfixed with `-next.x` where `x` is a number
-
-- for example your first test version might look like `0.7.1-next.0`, second test version would have `next.1`, etc
-
-2. run `npm publish --canary --exact --preid canary --tag=canary`
-3. In the project you wish to test in, run `npm i eslint-config-neo@canary`
+> [!TIP] Even though we have an automation set up for this, you should still confirm your package have being published successfully. If you ran into any issues feel free to ask support from your peers or post on #chapter-backend Slack Channel.

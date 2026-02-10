@@ -2,7 +2,7 @@ name: 'Publish latest package version'
 
 on:
   push:
-    branches: ['master']
+    branches: ['master', '**/*release-candidate*']
 
 jobs:
   publish-to-npm:

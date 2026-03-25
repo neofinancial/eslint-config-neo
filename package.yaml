@@ -1,0 +1,20 @@
+app:
+  name: ESLint Config Neo
+  description: Official Neo Financial ESLint Configuration
+  githubUrl: https://github.com/neofinancial/eslint-config-neo
+
+owner:
+  name: chapter-backend
+  slackChannel: '#chapter-backend'
+  alertsChannel: '#alerts'
+  triageTeam: Fullstack Triage Router
+  jiraUrl: https://neofinancial.atlassian.net/jira/software/projects/ENGCB/boards/44
+
+codeOwners:
+  - eduardoyuidy
+  - lucasparreira
+
+codeGardeners:
+  - eduardoyuidy
+
+faultTolerance: high

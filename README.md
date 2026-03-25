@@ -216,9 +216,9 @@ On some rare situations we need to test Library changes versions on a few servic
 
 ### Stable versions
 
-Once your changes have being tested and you're ready to publish a stable version, open your Pull Request, get approvals, merge it and publish the new package version. How it works:
+Once your changes have been tested and you're ready to publish a stable version, open your Pull Request, get approvals, merge it and publish the new package version. How it works:
 
 1. Make sure the version in `package.json` is following this format: `<<major>>.<<minor>>.<<patch>>` (e.g. `1.2.5`, `1.3.0`, etc).
 1. Make sure all changes including the version bump, lock file and your library changes are committed and pushed to your feature branch.
 1. Pull request is approved and merged into `master` branch;
-1. Run `npm publish --tag stable` (To be able to publish the new NPM package the user should be included on the [NPM Publisher List](https://www.npmjs.com/settings/neofinancial/teams/team/publishers/users). If you're not on that list ask for help to publish.)
+1. Run `npm publish --tag latest` (To be able to publish the new NPM package the user should be included on the [NPM Publisher List](https://www.npmjs.com/settings/neofinancial/teams/team/publishers/users). If you're not on that list ask for help to publish.)

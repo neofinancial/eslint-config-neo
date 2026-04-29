@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.15.0 (April 28, 2026)
+
+- Upgrade Node to 22
+
+
 ## 0.14.0 (January 29, 2026)
 
 - Refactored `config-backend` to reuse `config-architecture` rules, eliminating duplication

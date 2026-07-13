@@ -6,13 +6,12 @@
  *
  * This config ONLY enforces:
  * - import/no-restricted-paths (hexagonal layer boundaries)
- * - @typescript-eslint/no-restricted-imports (lodash tree-shaking, domain isolation)
+ * - no-restricted-imports (lodash tree-shaking, domain isolation)
  *
  * Usage in service's eslint.config.js:
  *   const architecture = require('eslint-config-neo/config-architecture');
  *   module.exports = [...architecture];
  */
-const tseslint = require('typescript-eslint');
 const importPlugin = require('eslint-plugin-import');
 
 // Hexagonal architecture zone restrictions
@@ -110,7 +109,7 @@ const domainLayerRestrictions = {
     },
     {
       name: '@neofinancial/neo-s3',
-      message: 'Hex: domain layer cannot know infrastructure details (S3)',
+      message: 'Hex: domain layer cannot know infrastructure details (Elasticsearch)',
     },
     {
       name: '@neofinancial/neo-elasticsearch',
@@ -129,28 +128,17 @@ module.exports = [
       'import/no-restricted-paths': ['error', { zones: hexagonalZones }],
     },
   },
-  // TypeScript files - lodash tree-shaking
-  tseslint.configs.base,
+  // All files - lodash tree-shaking
   {
-    files: ['**/*.ts', '**/*.tsx'],
-    plugins: {
-      '@typescript-eslint': tseslint.plugin,
-    },
-    languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {
-        projectService: true,
-      },
-    },
     rules: {
-      '@typescript-eslint/no-restricted-imports': ['error', lodashRestriction],
+      'no-restricted-imports': ['error', lodashRestriction],
     },
   },
   // Domain layer - cannot import infrastructure details
   {
     files: ['./src/domain/**/*.ts', './src/domain/**/*.tsx'],
     rules: {
-      '@typescript-eslint/no-restricted-imports': ['error', domainLayerRestrictions],
+      'no-restricted-imports': ['error', domainLayerRestrictions],
     },
   },
 ];

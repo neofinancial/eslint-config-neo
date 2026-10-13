@@ -109,7 +109,7 @@ const domainLayerRestrictions = {
     },
     {
       name: '@neofinancial/neo-s3',
-      message: 'Hex: domain layer cannot know infrastructure details (Elasticsearch)',
+      message: 'Hex: domain layer cannot know infrastructure details (S3)',
     },
     {
       name: '@neofinancial/neo-elasticsearch',

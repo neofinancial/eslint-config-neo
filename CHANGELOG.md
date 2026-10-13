@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.14.1 (2026-10-13)
+
+- Removed `typescript-eslint` from `config-architecture` so architecture linting works with TypeScript 7
+- Replaced `@typescript-eslint/no-restricted-imports` with the built-in `no-restricted-imports` rule for lodash tree-shaking and domain isolation
+
 ## 0.14.0 (January 29, 2026)
 
 - Refactored `config-backend` to reuse `config-architecture` rules, eliminating duplication
